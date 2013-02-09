@@ -44,12 +44,24 @@ namespace CommonWinSrv.Core
             if (this.Status == ActionStatus.Waiting)
             {
                 Status = ActionStatus.Working;
-                EventLog.WriteEntry("MoveDesk Service", string.Format("Running {0} at {1}", this.GetType().Name, DateTime.Now), EventLogEntryType.Information);
-                if (RunAction != null)
+                EventLog.WriteEntry("CommonWinSrv", string.Format("Running {0} at {1}", this.GetType().Name, DateTime.Now), EventLogEntryType.Information);
+                try
                 {
+                    if (RunAction != null)
+                    {
+                        throw new Exception("RunAction is null.");
+                    }
+
                     RunAction.Invoke();
                 }
-                Status = ActionStatus.Waiting;
+                catch (Exception ex)
+                {
+                    EventLog.WriteEntry("CommonWinSrv", string.Format("Error occured {0} at {1}", ex.Message, DateTime.Now), EventLogEntryType.Error);
+                }
+                finally
+                {
+                    Status = ActionStatus.Waiting;
+                }
             }
         }
 

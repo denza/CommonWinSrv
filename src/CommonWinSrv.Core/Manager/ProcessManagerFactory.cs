@@ -58,23 +58,23 @@ namespace CommonWinSrv.Core.Manager
 
         public void Init()
         {
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory init function started."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory init function started."), EventLogEntryType.Information);
             this.Instance.Init();
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory init function finished."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory init function finished."), EventLogEntryType.Information);
         }
 
         public void Start()
         {
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory start function started."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory start function started."), EventLogEntryType.Information);
             this.Instance.Start();
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory start function finished."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory start function finished."), EventLogEntryType.Information);
         }
 
         public void Stop()
         {
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory stop function started."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory stop function started."), EventLogEntryType.Information);
             this.Instance.Stop();
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory stop function finished."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory stop function finished."), EventLogEntryType.Information);
         }
 
         #endregion
@@ -94,7 +94,7 @@ namespace CommonWinSrv.Core.Manager
                 }
             catch (Exception ex)
             {
-                EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory deserialize configuration error. \n Stack: \n {0}",ex), EventLogEntryType.Error);
+                EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory deserialize configuration error. \n Stack: \n {0}",ex), EventLogEntryType.Error);
                 throw ex;
             }
         }
@@ -112,7 +112,7 @@ namespace CommonWinSrv.Core.Manager
 
         void OnChanged(object sender, FileSystemEventArgs e)
         {
-            EventLog.WriteEntry("MoveDesk Service", string.Format("Process manager factory configuration changed."), EventLogEntryType.Information);
+            EventLog.WriteEntry("CommonWinSrv", string.Format("Process manager factory configuration changed."), EventLogEntryType.Information);
             this.ResetInstance();
         }
 
