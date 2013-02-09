@@ -1,0 +1,5 @@
+C:\Users\Space\Documents\GitHub\CommonWinSrv\src\CommonWinSrv.Core\bin\Debug\CommonWinServ.Core.dll
+C:\Users\Space\Documents\GitHub\CommonWinSrv\src\CommonWinSrv.Core\bin\Debug\CommonWinServ.Core.pdb
+C:\Users\Space\Documents\GitHub\CommonWinSrv\src\CommonWinSrv.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Space\Documents\GitHub\CommonWinSrv\src\CommonWinSrv.Core\obj\Debug\CommonWinServ.Core.dll
+C:\Users\Space\Documents\GitHub\CommonWinSrv\src\CommonWinSrv.Core\obj\Debug\CommonWinServ.Core.pdb
